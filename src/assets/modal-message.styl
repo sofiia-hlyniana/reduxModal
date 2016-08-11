@@ -1,0 +1,54 @@
+brandColor = #0095da
+.modal-message
+	position absolute
+	top 0
+	right 0
+	bottom 0
+	left 0
+	padding 60px
+	transition opacity .2s ease-in-out
+	opacity 1
+	z-index 2
+	@media phone
+		padding 70px 20px 30px
+	&__image
+		height 140px
+		margin-bottom 50px
+		text-align center
+		@media phone
+			margin 20px 0 50px
+	&__title
+		font-size 32px
+		line-height 1.25
+		font-weight 600
+		text-transform uppercase
+		color #74777c
+		text-align center
+		@media phone
+			font-size 20px
+	&__icon
+		width 140px
+		height 140px
+		&-check
+		&-circle
+			fill none
+			stroke brandColor
+			stroke-width 5
+			animation successPathAnimation .4s linear forwards
+			.no-cssanimations &
+				animetion none
+		&-check
+			stroke-dasharray 150
+			stroke-dashoffset 150
+			animation-delay .4s
+			.no-cssanimations &
+				stroke-dashoffset 0
+		&-circle
+			stroke-dasharray 400
+			stroke-dashoffset -400
+			.no-cssanimations &
+				stroke-dashoffset 0
+
+@keyframes successPathAnimation
+	to
+		stroke-dashoffset 0

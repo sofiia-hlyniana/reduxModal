@@ -1,0 +1,53 @@
+errorColor = #a94442
+defaultColor = #bbc3cb
+brandColor = #0095da
+.modal-form
+	&__input
+		width 100%
+		padding 11px 15px
+		border 1px solid defaultColor
+		font-family 'quan', sans-serif
+		font-size 24px
+		color defaultColor
+		background-color #ffffff
+		transition border-color .15s ease-out, color .15s ease-out
+		&:-ms-input-placeholder
+			font-size 24px
+			color defaultColor
+		&:-webkit-autofill
+			box-shadow inset 0 0 0 50px #ffffff !important
+			background-color #ffffff
+			-webkit-text-fill-color defaultColor !important
+			color defaultColor !important
+			&:focus
+				color #74777c !important
+		@media (max-width: 767px)
+			padding 8px 15px
+			font-size 20px
+		&_textarea
+			resize none
+		&:focus
+			outline none
+			color #74777c
+			border-color brandColor
+		.has-error &
+			border-color errorColor
+			&:focus
+				box-shadow inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px #ce8483
+	&__button
+		display block
+		width 100%
+	&__error
+		position absolute
+		left 0
+		bottom 100%
+		margin-top 10px
+		color errorColor
+		font-size 18px
+		transition .2s ease-out
+		&_global
+			position static
+			margin 10px auto
+	.form-group
+		position relative
+		margin 0 0 25px

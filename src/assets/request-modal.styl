@@ -1,0 +1,41 @@
+.request-modal
+	display inline-block
+	vertical-align middle
+	z-index 201
+	width 450px
+	padding 45px
+	border none
+	background-color #fff
+	opacity 0
+	outline none
+	text-align left
+	transition .15s ease-out
+	@media (max-width: 767px)
+		width 90%
+		padding 20px
+	&__container
+		position fixed
+		z-index 200
+		top 0
+		bottom 0
+		left 0
+		right 0
+		background-color rgba(0,0,0,.6)
+		overflow-x hidden
+		overflow-y auto
+		opacity 0
+		text-align center
+		transition .15s ease-out
+		&:after
+			content ""
+			display inline-block
+			vertical-align middle
+			height 100%
+			width 0
+	&__title
+		margin 0 0 40px
+		color #74777c
+		font-size 34px
+		font-weight bold
+		@media (max-width: 767px)
+			margin 0 0 25px
