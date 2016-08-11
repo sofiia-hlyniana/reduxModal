@@ -1,0 +1,2 @@
+# reduxModal
+sample redux modal
